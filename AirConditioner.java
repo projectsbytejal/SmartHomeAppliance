@@ -1,4 +1,4 @@
-public class AC implements Appliance {
+public class AirConditioner implements Appliance {
     private String mode; // Can be "cooling", "heating", or "off"
 
     @Override
@@ -27,4 +27,3 @@ public class AC implements Appliance {
         }
     }
 }
-
