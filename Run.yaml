@@ -1,0 +1,25 @@
+name: Run Java Code
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up JDK 11
+        uses: actions/setup-java@v2
+        with:
+          java-version: '11'
+
+      - name: Compile Java Code
+        run: javac Main.java
+
+      - name: Run Java Code
+        run: java Main
